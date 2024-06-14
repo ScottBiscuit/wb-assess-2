@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    font-family: sans-serif;
+    color: white;
+}
+
+table {
+    border: 1px solid white;
+    margin-top: 50px;
+}
+
+th, 
+td { border: 1px solid white;
+    padding: 5px;
+
+}
+
