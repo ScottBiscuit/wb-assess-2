@@ -61,7 +61,6 @@ let doubleClick = document.querySelector('#item-adder')
 
 function itemAdder() {
     const item = document.createElement('li');
-    console.log(item)
   item.innerHTML = 'Item';
 
   const list = document.querySelector('ol');
@@ -79,7 +78,23 @@ doubleClick.addEventListener('click', itemAdder);
 // Clicking on "Turn Stuff Red" should make text red and clicking on "Turn
 // Stuff Blue" should make text blue.
 
-/// TODO: replace this with your code
+let blueTextBtn = document.querySelector('#blue')
+let redTextBtn = document.querySelector('#red')
+
+function turnStuffBlue() {
+// div #color-changer .changes-color 
+document.getElementById("color-changer").style.color = 'blue'
+}
+
+function turnStuffRed() {
+
+document.getElementById("color-changer").style.color = 'red'
+}
+
+blueTextBtn.addEventListener('click', turnStuffBlue);
+redTextBtn.addEventListener('click', turnStuffRed)
+
+
 
 // Calculate factorial
 //
@@ -113,4 +128,18 @@ doubleClick.addEventListener('click', itemAdder);
 // the feedback text to say "The word must be at least 4 characters long." and
 // change the color of the text to red..
 
-//TODO: replace this with your code
+function wordRec(event) {
+    event.preventDefault();
+    let word = document.getElementById('word');
+    let formFeedback = document.querySelector('.form-feedback');
+  
+    if (word.value.length >= 4) {
+      formFeedback.textContent = 'Thanks for your submission!';
+      formFeedback.style.color = 'green';
+    } else {
+      formFeedback.textContent = 'The word must be at least 4 characters long.';
+      formFeedback.style.color = 'red';
+    }
+  }
+  
+  document.getElementById('recommend-word').addEventListener('submit', wordRec)
