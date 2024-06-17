@@ -111,7 +111,23 @@ redTextBtn.addEventListener('click', turnStuffRed)
 //   - calls your function that calculates a factorial
 //   - puts the result of the function inside the "result" span
 
-/// TODO: replace this with your code
+function factorial(event) {
+    event.preventDefault();
+    const input = document.getElementById('factorial-input').value;
+    const result = document.getElementById('result');
+    result.innerHTML = factorialize(input);
+    
+  } 
+  
+  function factorialize(num) {
+    if (num === 0 || num === 1)
+      return 1;
+    for (let i = num - 1; i >= 1; i--) {
+      num *= i;
+    }
+    return num;
+  }
+  document.addEventListener('submit', factorial)
 
 // Validate a form
 //
