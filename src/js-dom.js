@@ -8,7 +8,20 @@
 // update and say "Log out". If a user clicks on the button again, its text
 // should switch from "Log Out" to "Log In".
 
-/// TODO: replace this with your code
+
+let logInBtn = document.querySelector('#auth')
+
+function changeText(){
+    if (logInBtn.innerText === 'Log in') {
+        logInBtn.innerText = 'Log out';
+      } else {
+        logInBtn.innerText = 'Log in';
+      }
+}
+
+logInBtn.addEventListener('click', changeText);
+
+
 
 // Send an alert
 //
@@ -17,7 +30,17 @@
 // A user should be able to enter what they want the alert to say in the
 // text box. Then, they can submit the form to trigger the alert.
 
-/// TODO: replace this with your code
+
+
+function sendAlert (event) {
+    event.preventDefault();
+    const alertText = document.querySelector('#alert-message').value;
+    alert(alertText)
+
+}
+
+document.querySelector('#send-alert').addEventListener('submit',sendAlert)
+
 
 // Add an item
 //
@@ -34,7 +57,18 @@
 //     <li>Item</li>  <!-- This was added after double-clicking -->
 //   </ol>
 
-/// TODO: replace this with your code
+let doubleClick = document.querySelector('#item-adder')
+
+function itemAdder() {
+    const item = document.createElement('li');
+    console.log(item)
+  item.innerHTML = 'Item';
+
+  const list = document.querySelector('ol');
+  list.appendChild(item);
+}
+
+doubleClick.addEventListener('click', itemAdder);
 
 // Change colors
 //
@@ -79,4 +113,4 @@
 // the feedback text to say "The word must be at least 4 characters long." and
 // change the color of the text to red..
 
-/// TODO: replace this with your code
+//TODO: replace this with your code
