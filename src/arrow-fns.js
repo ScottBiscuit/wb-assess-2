@@ -54,8 +54,10 @@ function createGreetings(names) {
 //   => ['APPLE', 'PINATA']
 function loudLongWords(words) {
     return words.filter(function(word) {
-        return word.length > 4
-    })
-}
+      return word.length > 4;
+    }).map(function(word) {
+      return word.toUpperCase();
+    });
+  }
 
 export { addNums, createGreetings, evens, giveMeTwo, loudLongWords, max };

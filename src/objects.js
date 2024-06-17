@@ -190,7 +190,18 @@ function isBugAvailable(bug, month) {
 //     12: [],
 //   }
 
-function buildBugHuntCalendar(bugs) {}
+function buildBugHuntCalendar(bugs) {
+  let calendar = {'1': [], '2': [], '3': [], '4': [], '5': [], '6': [],'7' : [], '8': [], '9': [], '10': [], '11': [], '12': []};
+  
+
+  for (let i = 0; i < bugs.length; i++) {
+    for (let j = 0; j < bugs[i].availability.months.length; j++) {
+     
+
+    }
+  }
+  return calendar;
+}
 
 export {
   buildBugHuntCalendar,
