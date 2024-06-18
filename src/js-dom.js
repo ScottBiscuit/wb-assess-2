@@ -78,19 +78,19 @@ doubleClick.addEventListener('click', itemAdder);
 // Clicking on "Turn Stuff Red" should make text red and clicking on "Turn
 // Stuff Blue" should make text blue.
 
-let blueTextBtn = document.querySelector('#blue')
-let redTextBtn = document.querySelector('#red')
+let blueTextBtn = document.querySelector('#blue');
+let redTextBtn = document.querySelector('#red');
+let changeColor = document.querySelectorAll('.changes-colors');
 
 function turnStuffBlue() {
 // div #color-changer .changes-color 
-document.getElementById("color-changer").style.color = 'blue'
+changeColor.forEach(el => el.style.color = 'blue')
 }
 
 function turnStuffRed() {
 
-document.getElementById("color-changer").style.color = 'red'
+changeColor.forEach(el => el.style.color = 'red')
 }
-
 blueTextBtn.addEventListener('click', turnStuffBlue);
 redTextBtn.addEventListener('click', turnStuffRed)
 
